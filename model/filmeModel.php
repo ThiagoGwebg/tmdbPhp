@@ -11,7 +11,7 @@ function importarFilmes(string $api_key)
     foreach ($data['results'] as $filme) {
         $titulo = $filme['title']; // o title é como a API retorna o título do filme
         $descricao = $filme['overview']; // o overview é como a API retorna a descrição do filme
-        $poster = "https://image.tmdb.org/t/p/w500" . $filme['poster_path']; // o poster_path é como a API retorna o caminho do poster do filme, concatenado com a URL base para formar o link completo da imagem
+        $poster = "https://image.tmdb.org/t/p/w500" . $filme['poster_path']; // o poster_path é como a API retorna o caminho do poster do filme, concatenado com a URL base para formar o link completo da imagem 
 
         // Insere os dados no banco de dados
         salvarFilme($titulo, $descricao, $poster);
